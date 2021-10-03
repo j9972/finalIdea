@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: 'cascade',
     });
   };
+// connect User with posts 
 
   return Users;
 };
