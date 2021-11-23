@@ -1,0 +1,175 @@
+.registration_main_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 700px;
+  margin: 120px auto;
+  background-color: white;
+}
+
+.form_Registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 360px;
+  height: 600px;
+  padding: 20px;
+}
+
+.form_Registration label {
+  color: #a3a3a3;
+  word-spacing: 0px;
+  background-color: white;
+  text-decoration: none solid rgb(153, 153, 153);
+  font-size: 12px;
+  display: inline;
+  margin-bottom: -5px;
+}
+
+.form_Registration #main_name {
+  font-family: Montserrat;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  word-spacing: 0px;
+  background-color: white;
+  text-decoration: none solid rgb(0, 0, 0);
+  font-size: 35px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form_Registration .email_content {
+  display: flex;
+  margin: 10px 0;
+}
+
+#intro_mention {
+  font-size: 12px;
+  color: #616161;
+  text-decoration: none solid rgb(97, 97, 97);
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+}
+
+.form_Registration .input_register {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+  border: rgb(239, 239, 239);
+  padding-left: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form_Registration #input_email {
+  height: 40px;
+  width: 310px;
+  background-color: #fafafa;
+  /* border는 항상이 아니라 blur를 발생시켰을때 실행 */
+  /* border: 1px solid #eb2e2e; */
+  border: rgb(239, 239, 239);
+  padding: 0;
+  padding-left: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form_Registration #email_check_btn {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: #efefef;
+  color: #6a6a6a;
+  font-size: 14px;
+}
+
+.form_Registration #register_btn {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  height: 45px;
+  border: none;
+  background-color: rgb(152, 221, 227);
+  border-radius: 4px;
+  color: white;
+}
+
+.form_Registration #back_btn {
+  margin-top: 15px;
+  font-size: 16px;
+  height: 45px;
+  border: none;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+}
+
+.checkbox_info #first_span {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.checkbox_info #second_span {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.checkbox_info #info1 {
+  display: flex;
+}
+
+.checkbox_info #info2 {
+  display: flex;
+}
+
+.termerror {
+  display: flex;
+  font-size: 14px;
+  color: red;
+}
+
+#agree_info1 {
+  padding-left: 4px;
+  margin-top: 5px;
+  color: black;
+}
+#agree_info2 {
+  padding-left: 4px;
+  margin-top: 5px;
+  color: black;
+}
+
+#first_span a {
+  text-decoration: none;
+  font-size: 12px;
+  transform: none;
+  cursor: pointer;
+  color: #0f62cd;
+  word-spacing: 0px;
+  float: left;
+  margin-top: 6px;
+  margin-left: 187px;
+}
+
+#second_span a {
+  text-decoration: none;
+  font-size: 12px;
+  transform: none;
+  cursor: pointer;
+  color: #0f62cd;
+  word-spacing: 0px;
+  float: left;
+  margin-top: 6px;
+  margin-left: 208px;
+}
+
+a:hover {
+  text-decoration: underline solid rgb(15, 110, 205);
+}

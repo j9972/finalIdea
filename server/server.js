@@ -1,8 +1,9 @@
 const express = require('express');
+require('express-async-errors');
 // express module 호출
 
 const app = express();
-const PORT = 3002;
+const PORT = 3003;
 const cors = require('cors');
 // cors 를 부르기 위한 모듈 호출
 
@@ -21,10 +22,6 @@ app.use(cookieParser());
 
 // Routers -> 변수명을 지정하고 서버에서 연결을 할때 ' '뒤의 url을 나중에 localhost 포트넘버 뒤에 연결을 해줘야 함.
 // 변수 지정시 require로 route폴더 안에 있는 파일을 연결을 해줘야 한다.
-const postRouter = require('./routes/Posts');
-
-app.use('/posts', postRouter);
-
 const usersRouter = require('./routes/Users');
 
 app.use('/user', usersRouter);

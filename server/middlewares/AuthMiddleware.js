@@ -4,7 +4,7 @@ const { verify } = require('jsonwebtoken');
 const validateToken = (req, res, next) => {
   const accessToken = req.header('accessToken');
   // postman header에 accessToken을 넣어서 로그인 유저를 확인했던것을 위해 req.header의 accessToken을  만듬
-  console.log('111 accessToken : ', accessToken);
+  console.log('1999.07.02 accessToken : ', accessToken);
   if (!accessToken) {
     console.log('여기가 문제');
     return res.json({ error: 'User not logged in!' });

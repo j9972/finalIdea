@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "jh485200@@",
-    "database": "knuProject",
+    "database": "TRIP",
     "host": "localhost",
     "dialect": "mysql"
   },
