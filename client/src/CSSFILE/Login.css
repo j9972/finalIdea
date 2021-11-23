@@ -1,0 +1,169 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  outline: none;
+}
+div{
+  display: block;
+}
+
+.App {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+@media (max-width: 600px){
+  .container {
+    width:90vw;
+    box-shadow: unset;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 410px;
+  padding: 30px;
+}
+
+.container .text {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.container .small-text{
+  font-size: 12px;
+  text-align: center;
+  color: #666666;
+  letter-spacing: 1px;
+}
+.container .form-container{
+  width:100%;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.form-container .data{
+  width: 100%;
+  height: 45px;
+  margin: 40px 0;
+}
+.form-container .data label{
+  font-size: 14px;
+  color: #666666;
+}
+.form-container .data input{
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  border:none;
+  border-bottom: 1px solid #E0E0E0;
+  
+}
+.form-container .data input:focus{
+  outline: none;
+  border-bottom: 2px solid #3498DB;
+}
+.form-input-validation{
+  font-size: 12px;
+  color: red;
+  text-align: right;
+}
+.form-container .forgot-pass{
+  margin-top: -8px;
+  font-size: 14px;
+}
+.form-container .forgot-pass a{
+  color: #3498DB;
+  cursor:pointer;
+  text-decoration: none;
+}
+.form-container .forgot-pass a:hover{
+  text-decoration: underline solid;
+}
+.form-container .btn{
+  position: relative;
+  overflow: hidden;
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+}
+
+.form-container .btn button{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border:none;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #98DDE3;
+}
+.form-container .signup-link{
+  font-size: 14px;
+  text-align: center;
+  color:#666666;
+}
+.form-container .signup-link a{
+  color: #3498DB;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form-container .signup-link a:hover{
+  text-decoration: underline;
+}
+
+.divider-container{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 8px;
+}
+.divider-container .divider{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+  background-color: #E0E0E0;
+}
+.divider-container span{
+  position: relative;
+  background-color: white;
+  width: 10vw;
+  display: inline-block;
+  color:#616161;
+}
+.sns-text{
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.socialBtn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+  width: 100%;
+  
+}
+.socialBtn-container .socialBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  
+}
+.socialBtn img{
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
