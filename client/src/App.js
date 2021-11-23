@@ -2,7 +2,7 @@ import "./CSSFILE/App.css";
 import "./CSSFILE/registration.css";
 import "./CSSFILE/tripHome.css";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Login from "./pages/Home_js/Login";
+
 // import Home from "./pages/Home";
 import Registration from "./pages/Registration";
 import TripHome from "./pages/tripHome";
@@ -14,7 +14,6 @@ function App() {
         <Switch>
           <Route path="/home" exact component={TripHome} />
           <Route path="/Registration" exact component={Registration} />
-          <Route path="/login" exact component={Login} />
         </Switch>
       </Router>
     </div>
