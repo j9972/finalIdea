@@ -15,7 +15,7 @@ router.use(express.urlencoded({ extended: true }));
 // application/json으로 들어오는 정보들을 넣기 위해서 사용하는 코드
 router.use(bodyParser.json());
 
-// const { sign } = require('jsonwebtoken');
+const { sign } = require('jsonwebtoken');
 
 const { Users } = require('../models');
 
@@ -57,6 +57,29 @@ router.post('/', async (req, res) => {
     res.json('SUCCESS, NOW YOU GET YOUR ID');
     console.log('Success');
   });
+});
+
+router.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await Users.findOne({ where: { email } });
+
+  if (!user) res.status(401);
+  if (!user) res.json({ error: "User Doesn't Exist" });
+
+  bcrypt.compare(password, user.password).then(async match => {
+    if (!match) res.json({ error: 'Wrong Username And Password Combination' });
+
+    const accessToken = sign(
+      { email: user.email, id: user.id },
+      'importantsecret',
+    );
+    res.json({ token: accessToken, email: user.email, id: user.id });
+  });
+});
+
+router.get('/auth', validateToken, (req, res) => {
+  res.json(req.user);
 });
 
 router.get('/', (req, res) => {

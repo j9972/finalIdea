@@ -3,29 +3,29 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import swal from "sweetalert";
+import { useHistory } from "react-router-dom";
+import Swal from "sweetalert";
 
 //임시 import
 // import { KAKAO_AUTH_URL } from "./OAuth";
 
-
-async function loginUser(credentials) {
+async function loginUser(data) {
+  // const history = useHistory();
   axios
-    .post("https://eab822ef-3aaa-43b5-a054-941efd4ce508.mock.pstmn.io", credentials)
+    .post("http://localhost:3003/user/login", data)
     .then((res) => {
-      swal("Success", res.data.message, "success", {
-        buttons: false,
-        timer: 2000,
-      }).then((value) => {
-        window.location.href = "https://www.myro.co.kr/";
-      });
+      console.log(res);
+
+      window.location.href = "http://localhost:3000/home";
       return true;
     })
     .catch((err) => {
       // 아이디,비밀번호 오류일 경우
+      console.log("err: ", err);
       if (err.response.status === 401) {
-        const data = err.response.data;
-        swal("Failed", data.message, "error");
+        const data = err.response.data.error;
+        console.log(data);
+        Swal("Failed", data, "error");
       } else {
         console.log("전송시에 문제가 생김");
       }
@@ -132,7 +132,6 @@ function Login() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

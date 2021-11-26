@@ -13,19 +13,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 360px;
-  height: 600px;
+  width: 400px;
+  height: 682px;
   padding: 20px;
 }
 
 .form_Registration label {
+  display: block;
   color: #a3a3a3;
   word-spacing: 0px;
   background-color: white;
   text-decoration: none solid rgb(153, 153, 153);
   font-size: 12px;
-  display: inline;
-  margin-bottom: -5px;
+
+  margin-bottom: 5px;
 }
 
 .form_Registration #main_name {
@@ -58,8 +59,9 @@
 }
 
 .form_Registration .input_register {
+  /* display: flex; */
   height: 40px;
-  margin-top: 10px;
+  margin-top: 10px 0;
   margin-bottom: 10px;
   background-color: #fafafa;
   border: rgb(239, 239, 239);
@@ -83,8 +85,9 @@
 
 .form_Registration #email_check_btn {
   height: 40px;
-  width: 40px;
+  width: 50px;
   border: none;
+  cursor: pointer;
   background-color: #efefef;
   color: #6a6a6a;
   font-size: 14px;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -100,7 +100,7 @@ function Registration() {
         //console.log(JSON.stringify(error));
         overlapEmail(error);
       });
-    // history.push("localhost:3000/home")
+    history.push("/home");
   };
 
   const onChangePassword = (e) => {
@@ -174,7 +174,7 @@ function Registration() {
                 확인
               </button>
             </div>
-            {errors.email ?? <div>{errors.email}</div>}
+            {errors.email && <div>{errors.email}</div>}
 
             <label>이름</label>
             <Field
