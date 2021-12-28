@@ -3,14 +3,15 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 import Swal from "sweetalert";
 
 //임시 import
 // import { KAKAO_AUTH_URL } from "./OAuth";
 
 async function loginUser(data) {
-  // const history = useHistory();
+  let emailValue = document.querySelectorAll("#email");
+  let passwordValue = document.querySelectorAll("#password");
+
   axios
     .post("http://localhost:3003/user/login", data)
     .then((res) => {
@@ -26,6 +27,8 @@ async function loginUser(data) {
         const data = err.response.data.error;
         console.log(data);
         Swal("Failed", data, "error");
+        emailValue.value = null;
+        passwordValue.value = null;
       } else {
         console.log("전송시에 문제가 생김");
       }
