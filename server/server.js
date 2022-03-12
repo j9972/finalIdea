@@ -26,6 +26,10 @@ const usersRouter = require('./routes/Users');
 
 app.use('/user', usersRouter);
 
+const SearchRouter = require('./routes/Search');
+
+app.use('/search', SearchRouter);
+
 // sequelize를 실행하고 이를 위해서 app.listen을 묶어줘야 한다.
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {

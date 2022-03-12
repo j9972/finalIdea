@@ -3,7 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 function Registration() {
   const Swal = require("sweetalert2");

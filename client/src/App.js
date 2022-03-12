@@ -1,23 +1,28 @@
 import "./CSSFILE/App.css";
 import "./CSSFILE/registration.css";
 import "./CSSFILE/tripHome.css";
+import "./pages/Searching.css";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-// import Home from "./pages/Home";
 import Registration from "./pages/Registration";
 import TripHome from "./pages/tripHome";
 import Login from "./pages/Login";
-// temp feature 개발 완료
+import Searching from "./pages/Searching";
+import NaverMap from "./pages/NaverMap";
+
 function App() {
   return (
     <div className="App">
+      <p>hi</p>
       <Router>
-        <Switch>
+        <Routes>
           <Route path="/home" exact component={TripHome} />
           <Route path="/Registration" exact component={Registration} />
           <Route path="/Login" exact component={Login} />
-        </Switch>
+          <Route path="/searching" exact component={Searching} />
+          <Route path="/map" exact component={NaverMap} />
+        </Routes>
       </Router>
     </div>
   );
