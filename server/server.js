@@ -1,5 +1,4 @@
 const express = require('express');
-require('express-async-errors');
 // express module 호출
 
 const app = express();
@@ -14,7 +13,7 @@ const db = require('./models');
 // model ( db column 생성을 위한 폴더 ) 연결
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 // npm cors module를 선언 해주지 않으면 cors() 문제가 발생. 이는, 포트넘버, 도메인,서브도메인 등 하나라도 다르면 발생
 

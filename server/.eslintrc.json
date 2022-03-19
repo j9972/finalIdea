@@ -28,9 +28,11 @@
     "react/prefer-stateless-function": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
-    "no-nested-ternary": 0
+    "no-nested-ternary": 0,
+    "strict": 0
   },
   "globals": {
     "React": "writable"
-  }
+  },
+  "parser": "babel-eslint",
 }
