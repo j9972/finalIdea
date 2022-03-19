@@ -2,7 +2,7 @@ import "./CSSFILE/App.css";
 import "./CSSFILE/registration.css";
 import "./CSSFILE/tripHome.css";
 import "./pages/Searching.css";
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Registration from "./pages/Registration";
@@ -12,20 +12,35 @@ import Searching from "./pages/Searching";
 import NaverMap from "./pages/NaverMap";
 
 function App() {
+  const [appSiteInfo, setAppSiteInfo] = useState([]);
   return (
     <div className="App">
-      <p>hi</p>
       <Router>
         <Routes>
-          <Route path="/home" exact component={TripHome} />
-          <Route path="/Registration" exact component={Registration} />
-          <Route path="/Login" exact component={Login} />
-          <Route path="/searching" exact component={Searching} />
-          <Route path="/map" exact component={NaverMap} />
+          <Route path="/home" element={<TripHome />} />
+          <Route path="/Registration" element={<Registration />} />
+          <Route path="/Login" element={<Login />} />
+          <Route
+            path="/searching"
+            element={
+              <Searching
+                appSiteInfo={appSiteInfo}
+                setAppSiteInfo={setAppSiteInfo}
+              />
+            }
+          />
+          <Route
+            path="/map"
+            element={
+              <NaverMap
+                appSiteInfo={appSiteInfo}
+                setAppSiteInfo={setAppSiteInfo}
+              />
+            }
+          />
         </Routes>
       </Router>
     </div>
   );
 }
-
 export default App;

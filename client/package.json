@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "dotenv": "^16.0.0",
     "formik": "^2.2.9",
     "http-proxy-middleware": "^2.0.1",
     "proj4": "^2.7.5",
@@ -50,5 +51,6 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
